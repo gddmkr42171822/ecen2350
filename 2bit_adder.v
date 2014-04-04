@@ -1,3 +1,5 @@
+/* adds 2 bits and outputs overflow and carryout */
+
 module adder(carryin, X, Y, S, carryout, overflow);
 parameter n = 1;
 input carryin;

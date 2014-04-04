@@ -1,3 +1,5 @@
+/* adds 2 hex numbers and outputs the sum to the 7 seg display */
+
 module deo_hex_adder(X, Y, SevenSX, SevenSY, Sum1, Sum2, SevenSS1, SevenSS2);
     input [3:0] X, Y;
 	 output reg [3:0] Sum1, Sum2;

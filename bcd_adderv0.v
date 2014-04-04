@@ -1,3 +1,7 @@
+/* Code that adds bcd digits with by pressing or holding down the pushbuttons on the de0 and outputs it to the 
+ * seven seg display
+*/
+
 module BCDcount(Clock, Pushbutton1, Pushbutton2, Pushbutton3, Clear, BCD0, BCD1, BCD2, BCD3, LED);
 input Clear, Clock;
 input Pushbutton1, Pushbutton2, Pushbutton3;
