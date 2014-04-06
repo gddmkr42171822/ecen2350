@@ -20,7 +20,7 @@ end
 assign Q = Q2&~Q3;
 endmodule
 
-module mealy(Clock, Resetn, Button, z, z0, z1, z2, z3, z4, z5);
+module mealy(Clock, Resetn, Button, z, z0, z1, z2, z3, z4);
 input Clock, Resetn;
 input [2:0] Button;
 output z0, z1, z2, z3, z4, z5;
@@ -138,6 +138,5 @@ assign z1 = (y == S1);
 assign z2 = (y == S2);
 assign z3 = (y == S3);
 assign z4 = (y == S4);
-assign z5 = (y == S5);
 
 endmodule
