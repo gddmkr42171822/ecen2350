@@ -23,12 +23,12 @@ endmodule
 module mealy(Clock, Resetn, Button, z, z0, z1, z2, z3, z4);
 input Clock, Resetn;
 input [2:0] Button;
-output z0, z1, z2, z3, z4, z5;
+output z0, z1, z2, z3, z4;
 output reg z;
 wire A, B, C;
 reg [2:0] y;
 reg [2:0] r;
-parameter [2:0] S0 = 3'b000, S1 = 3'b001, S2 = 3'b010, S3 = 3'b011, S4 = 3'b100, S5 = 3'b101;
+parameter [2:0] S0 = 3'b000, S1 = 3'b001, S2 = 3'b010, S3 = 3'b011, S4 = 3'b100;
 
 initial begin
 y <= S0;
