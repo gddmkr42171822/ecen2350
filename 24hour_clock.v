@@ -42,6 +42,8 @@ input [1:0] Buttons;
 input clock_set, display_switch, Clock;
 wire hours, minutes;
 reg [3:0] BCD0, BCD1, BCD2, BCD3;
+reg [9:0] usecond_cntr;
+reg [9:0] msecond_cntr;
 reg [3:0] second_cntr1, second_cntr2, minute_cntr1, minute_cntr2, hour_cntr1, hour_cntr2;
 
 output [0:6] y0, y1, y2, y3;
@@ -62,13 +64,6 @@ end
 /* Button pulses */
 newPress one (Clock, Buttons[0], minutes);
 newPress two (Clock, Buttons[1], hours);
-
-	reg [9:0] usecond_cntr;
-	reg [9:0] msecond_cntr;
-	reg [5:0] second_cntr;
-	reg [5:0] minute_cntr;
-	reg [4:0] hour_cntr;
-	reg [9:0] day_cntr;
 
 parameter CLOCK_MHZ = 50;
 
