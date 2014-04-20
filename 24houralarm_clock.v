@@ -27,6 +27,7 @@ module hexdisplay (x,y);
 
 endmodule	
 
+/* Detects Button Presses and outputs 1 if there is one */
 module newPress(Clock, Btn, oNewPress);
 input Clock;
 input Btn;
@@ -39,6 +40,8 @@ reg [1:0] press;
 assign oNewPress = ~press[1]&press[0];
 endmodule
 
+
+/* Main driving module */
 module twentyfourhour_clock(Clock, display_switch, alarm_set, alarm_on, clock_set, Buttons, y0, y1, y2, y3, led0, led1, led2, led3, led4, led5, led6, led7, led8, led9);
 input [2:0] Buttons;
 input clock_set, display_switch, Clock, alarm_set, alarm_on;
@@ -343,7 +346,7 @@ begin
 	end
 end
 
-/* Detect the alarm and flash the leds */
+/* Flashes the leds when the alarm and clock are the same time */
 always@(posedge Clock)
 begin
 	if(alarm_on == 1'b1)
