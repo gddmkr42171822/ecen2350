@@ -330,6 +330,7 @@ begin
 	end
 end
 
+/* Turns off blinking leds if there is a button press */
 always@(posedge Clock)
 begin
 	if(hours == 1'b1 || minutes == 1'b1 || button3 == 1'b1)
@@ -419,7 +420,7 @@ begin
 	end
 end
 
-/* Switches the 7segment between Min:Sec and Hr:Min and detects alarm set switch*/
+/* Switches the 7segment between Min:Sec and Hr:Min and detects alarm set switch */
 always@(posedge Clock)
 begin
 	if(en == 1'b1)
